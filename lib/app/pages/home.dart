@@ -1,4 +1,4 @@
-import 'package:appanimacoescomplexas/app/auxiliarWidgets/gradientContainer.dart';
+import 'package:appanimacoescomplexas/app/commonWidgets/gradientContainer.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {

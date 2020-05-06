@@ -1,4 +1,5 @@
 import 'package:appanimacoescomplexas/app/pages/home.dart';
+import 'package:appanimacoescomplexas/app/themes/appTheme.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -9,9 +10,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'App Animações Complexas',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
-      ),
+      theme: appTheme(),
       home: Home(),
     );
   }
