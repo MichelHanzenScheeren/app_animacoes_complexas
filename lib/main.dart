@@ -1,4 +1,4 @@
-import 'package:appanimacoescomplexas/app/pages/home.dart';
+import 'package:appanimacoescomplexas/app/pages/login/login.dart';
 import 'package:appanimacoescomplexas/app/themes/appTheme.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
       title: 'App Animações Complexas',
       debugShowCheckedModeBanner: false,
       theme: appTheme(),
-      home: Home(),
+      home: Login(),
     );
   }
 }
