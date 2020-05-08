@@ -2,8 +2,8 @@ import 'package:appanimacoescomplexas/app/pages/login/CreateAccountButton.dart';
 import 'package:appanimacoescomplexas/app/pages/login/forgetPasswordButton.dart';
 import 'package:appanimacoescomplexas/app/pages/login/loginButton.dart';
 import 'package:appanimacoescomplexas/app/pages/login/loginFormField.dart';
-import 'package:appanimacoescomplexas/app/validators/emailValidate.dart';
 import 'package:appanimacoescomplexas/app/validators/passwordValidate.dart';
+import 'package:appanimacoescomplexas/app/validators/usernameValidate.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -23,10 +23,9 @@ class LoginForm extends StatelessWidget {
           Icon(Icons.person_pin, size: 160),
           SizedBox(height: 10),
           LoginFormField(
-            text: "E-mail",
-            icon: Icons.alternate_email,
-            type: TextInputType.emailAddress,
-            validator: emailValidate,
+            text: "Username",
+            icon: Icons.person_outline,
+            validator: usernameValidate,
           ),
           SizedBox(height: 10),
           LoginFormField(

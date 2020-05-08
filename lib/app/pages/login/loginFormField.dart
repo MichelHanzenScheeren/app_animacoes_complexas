@@ -8,7 +8,6 @@ class LoginFormField extends StatefulWidget {
   final IconData icon;
   final TextEditingController controller;
   final bool obscureTextControl;
-  final TextInputType type;
   final Function(String text) validator;
 
   LoginFormField({
@@ -16,7 +15,6 @@ class LoginFormField extends StatefulWidget {
     @required this.icon,
     this.controller,
     this.obscureTextControl: false,
-    this.type: TextInputType.text,
     this.validator,
   });
 
@@ -52,7 +50,7 @@ class _LoginFormFieldState extends State<LoginFormField> {
       onChanged: (_) => setState(() => autoValidate = true),
       keyboardType: obscureTextControl && !obscure
           ? TextInputType.visiblePassword
-          : widget.type,
+          : TextInputType.text,
       textAlignVertical: TextAlignVertical.top,
       decoration: InputDecoration(
         errorMaxLines: 2,
