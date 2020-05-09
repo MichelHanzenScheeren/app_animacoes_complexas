@@ -13,7 +13,7 @@ class _CategoryRowState extends State<CategoryRow> {
   final Animation<double> animation;
   _CategoryRowState(this.animation);
 
-  final List categories = ["ESTUDOS", "TRABALHO", "CASA"];
+  final List categories = ["TRABALHO", "ESTUDOS", "CASA"];
   int currentCategory = 1;
 
   @override

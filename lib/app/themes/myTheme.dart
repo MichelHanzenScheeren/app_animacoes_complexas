@@ -12,3 +12,9 @@ TextStyle myHomeTitleTextStyle() =>
 
 TextStyle myHomeCategoriesTextStyle() => myHomeTitleTextStyle()
     .copyWith(fontWeight: FontWeight.normal);
+
+TextStyle myListTitleTextStyle() =>
+    TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold);
+
+TextStyle myListSubtitleTextStyle() =>
+    TextStyle(color: Colors.white70, fontSize: 16);
