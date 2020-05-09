@@ -8,6 +8,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class LoginForm extends StatelessWidget {
+  final AnimationController controller;
+  LoginForm(this.controller);
+
   final formKey = GlobalKey<FormState>();
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
@@ -16,38 +19,49 @@ class LoginForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return Form(
       key: formKey,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
+      child: Stack(
+        alignment: Alignment.bottomCenter,
         children: <Widget>[
-          Icon(Icons.person_pin, size: 160),
-          SizedBox(height: 10),
-          LoginFormField(
-            text: "Username",
-            icon: Icons.person_outline,
-            validator: usernameValidate,
+          Container(
+            width: 320,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+                Icon(Icons.person_pin, size: 160),
+                SizedBox(height: 10),
+                LoginFormField(
+                  text: "Username",
+                  icon: Icons.person_outline,
+                  validator: usernameValidate,
+                ),
+                SizedBox(height: 10),
+                LoginFormField(
+                  text: "Password",
+                  icon: Icons.lock_outline,
+                  controller: passwordController,
+                  obscureTextControl: true,
+                  validator: passwordValidate,
+                ),
+                ForgetPasswordButton(),
+                SizedBox(height: 160)
+              ],
+            ),
           ),
-          SizedBox(height: 10),
-          LoginFormField(
-            text: "Password",
-            icon: Icons.lock_outline,
-            controller: passwordController,
-            obscureTextControl: true,
-            validator: passwordValidate,
+          Column(
+            children: <Widget>[
+              LoginButton(doLogin, controller),
+              CreateAccountButton(),
+            ],
           ),
-          ForgetPasswordButton(),
-          SizedBox(height: 20),
-          LoginButton(doLogin),
-          SizedBox(height: 40),
-          CreateAccountButton(),
         ],
       ),
     );
   }
 
   void doLogin() {
-    if (formKey.currentState.validate()) {
-      print("Login concluído!");
-    } else {}
+    //if (formKey.currentState.validate()) {
+      controller.forward();
+    //} else {}
   }
 }

@@ -1,6 +1,4 @@
-import 'dart:async';
-
-import 'package:appanimacoescomplexas/app/themes/personalTheme.dart';
+import 'package:appanimacoescomplexas/app/themes/myTheme.dart';
 import 'package:flutter/material.dart';
 
 class LoginFormField extends StatefulWidget {
@@ -65,7 +63,7 @@ class _LoginFormFieldState extends State<LoginFormField> {
               )
             : null,
       ),
-      style: personalInputTextStyle(),
+      style: myInputTextStyle(),
     );
   }
 }

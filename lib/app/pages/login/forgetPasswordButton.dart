@@ -1,4 +1,4 @@
-import 'package:appanimacoescomplexas/app/themes/personalTheme.dart';
+import 'package:appanimacoescomplexas/app/themes/myTheme.dart';
 import 'package:flutter/material.dart';
 
 class ForgetPasswordButton extends StatelessWidget {
@@ -10,7 +10,7 @@ class ForgetPasswordButton extends StatelessWidget {
         margin: EdgeInsets.only(top: 5),
         child: Text(
           "Esqueceu sua senha?",
-          style: forgetPasswordTextStyle(),
+          style: myForgetPasswordTextStyle(),
           textAlign: TextAlign.right,
         ),
       ),

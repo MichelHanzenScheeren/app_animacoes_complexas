@@ -1,4 +1,4 @@
-import 'package:appanimacoescomplexas/app/themes/personalTheme.dart';
+import 'package:appanimacoescomplexas/app/themes/myTheme.dart';
 import 'package:flutter/material.dart';
 
 class CreateAccountButton extends StatelessWidget {
@@ -8,7 +8,7 @@ class CreateAccountButton extends StatelessWidget {
       onTap: () {},
       child: Text(
         "Ainda não possui conta?",
-        style: personalButtonTextStyle().copyWith(fontSize: 18),
+        style: myButtonTextStyle().copyWith(fontSize: 18),
         textAlign: TextAlign.center,
       ),
     );
