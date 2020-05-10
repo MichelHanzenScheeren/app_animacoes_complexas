@@ -8,13 +8,13 @@ TextStyle myForgetPasswordTextStyle() =>
     TextStyle(color: Colors.white54, fontSize: 15);
 
 TextStyle myHomeTitleTextStyle() =>
-    TextStyle(color: Colors.white, fontSize: 30, fontWeight: FontWeight.bold);
+    TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold);
 
 TextStyle myHomeCategoriesTextStyle() => myHomeTitleTextStyle()
     .copyWith(fontWeight: FontWeight.normal);
 
 TextStyle myListTitleTextStyle() =>
-    TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold);
+    TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold);
 
 TextStyle myListSubtitleTextStyle() =>
     TextStyle(color: Colors.white70, fontSize: 16);

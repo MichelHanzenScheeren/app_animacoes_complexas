@@ -1,3 +1,4 @@
+import 'package:appanimacoescomplexas/app/pages/home/home.dart';
 import 'package:appanimacoescomplexas/app/pages/login/CreateAccountButton.dart';
 import 'package:appanimacoescomplexas/app/pages/login/forgetPasswordButton.dart';
 import 'package:appanimacoescomplexas/app/pages/login/loginButton.dart';
@@ -12,11 +13,13 @@ class LoginForm extends StatelessWidget {
   LoginForm(this.controller);
 
   final formKey = GlobalKey<FormState>();
-  final emailController = TextEditingController();
+  final usernameController = TextEditingController();
   final passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
+    void doLogin() => applyLogin(context);
+
     return Form(
       key: formKey,
       child: Stack(
@@ -34,6 +37,7 @@ class LoginForm extends StatelessWidget {
                   text: "Username",
                   icon: Icons.person_outline,
                   validator: usernameValidate,
+                  controller: usernameController,
                 ),
                 SizedBox(height: 10),
                 LoginFormField(
@@ -59,9 +63,16 @@ class LoginForm extends StatelessWidget {
     );
   }
 
-  void doLogin() {
-    //if (formKey.currentState.validate()) {
+  void applyLogin(BuildContext context) {
+    if (formKey.currentState.validate()) {
       controller.forward();
-    //} else {}
+      controller.addStatusListener((status) {
+        if (status == AnimationStatus.completed) {
+          Navigator.of(context).pushReplacement(MaterialPageRoute(
+            builder: (context) => Home(username: usernameController.text),
+          ));
+        }
+      });
+    } else {}
   }
 }

@@ -28,7 +28,7 @@ class _CategoryRowState extends State<CategoryRow> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           IconButton(
-            icon: Icon(Icons.keyboard_arrow_left, size: animation.value * 30),
+            icon: Icon(Icons.keyboard_arrow_left, size: animation.value * 24),
             onPressed: currentCategory > 0
                 ? () => setState(() => currentCategory--)
                 : null,
@@ -36,10 +36,10 @@ class _CategoryRowState extends State<CategoryRow> {
           Text(
             categories[currentCategory],
             style: myHomeCategoriesTextStyle()
-                .copyWith(fontSize: animation.value * 20),
+                .copyWith(fontSize: animation.value * 18),
           ),
           IconButton(
-            icon: Icon(Icons.keyboard_arrow_right, size: animation.value * 30),
+            icon: Icon(Icons.keyboard_arrow_right, size: animation.value * 24),
             onPressed: currentCategory < categories.length - 1
                 ? () => setState(() => currentCategory++)
                 : null,

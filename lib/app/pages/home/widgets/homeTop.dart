@@ -1,7 +1,6 @@
 import 'package:appanimacoescomplexas/app/pages/home/widgets/categoryRow.dart';
 import 'package:appanimacoescomplexas/app/themes/myTheme.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart' show timeDilation;
 
 class HomeTop extends StatelessWidget {
   final Animation<double> animation;
@@ -10,7 +9,6 @@ class HomeTop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //timeDilation = 8;
     return Container(
       height: MediaQuery.of(context).size.height * 0.4,
       decoration: BoxDecoration(
@@ -26,7 +24,7 @@ class HomeTop extends StatelessWidget {
               child: Text(
                 "Bem-vindo, $username!",
                 style: myHomeTitleTextStyle()
-                    .copyWith(fontSize: animation.value * 30),
+                    .copyWith(fontSize: animation.value * 24),
               ),
             ),
             userCircle(),

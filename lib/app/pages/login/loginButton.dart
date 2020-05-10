@@ -55,10 +55,13 @@ class LoginButton extends StatelessWidget {
             ),
           );
         } else {
-          return Container(
-            height: buttonZoomOut.value,
-            width: buttonZoomOut.value,
-            color: Color.fromRGBO(76, 43, 136, 1),
+          return Hero(
+            tag: "fade",
+            child: Container(
+              height: buttonZoomOut.value,
+              width: buttonZoomOut.value,
+              color: Color.fromRGBO(76, 43, 136, 1),
+            ),
           );
         }
       },

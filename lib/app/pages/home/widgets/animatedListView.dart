@@ -12,7 +12,7 @@ class AnimatedListView extends StatelessWidget {
       ToDoItem(
         title: "Estudar Flutter",
         subtitle: "Mínimo de 2 horas por dia",
-        margin: animation.value * 2,
+        margin: animation.value * 0,
       ),
       ToDoItem(
         title: "Estudar Inglês",
@@ -22,12 +22,12 @@ class AnimatedListView extends StatelessWidget {
       ToDoItem(
         title: "Estudar Python",
         subtitle: "Mínimo de 30 minutos por dia",
-        margin: animation.value * 0,
+        margin: animation.value * 2,
       )
     ];
 
     return Padding(
-      padding: const EdgeInsets.all(10.0),
+      padding: const EdgeInsets.symmetric(vertical: 10),
       child: Stack(
         alignment: Alignment.bottomLeft,
         children: itens.map((item) {
@@ -37,7 +37,10 @@ class AnimatedListView extends StatelessWidget {
             margin: item.margin,
             decoration: BoxDecoration(
               color: Color.fromRGBO(76, 43, 136, 1),
-              border: Border.all(color: Colors.purple)
+              border: Border(
+                top: BorderSide(color: Colors.purple),
+                bottom: BorderSide(color: Colors.purple),
+              ),
             ),
             child: Padding(
               padding: const EdgeInsets.all(10),
